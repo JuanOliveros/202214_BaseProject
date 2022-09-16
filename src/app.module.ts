@@ -1,12 +1,29 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MuseumModule } from './museum/museum.module';
 import { AerolineaModule } from './aerolinea/aerolinea.module';
 import { AeropuertoModule } from './aeropuerto/aeropuerto.module';
+import { AerolineaEntity } from './aerolinea/aerolinea.entity';
+import { AeropuertoEntity } from './aeropuerto/aeropuerto.entity';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [MuseumModule, AerolineaModule, AeropuertoModule],
+  imports: [
+    AerolineaModule,
+    AeropuertoModule,
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      username: 'postgres',
+      password: 'password',
+      database: 'aerolinea',
+      entities: [AerolineaEntity, AeropuertoEntity],
+      dropSchema: true,
+      synchronize: true,
+      keepConnectionAlive: true,
+    }),
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
