@@ -4,6 +4,7 @@ import { AeropuertoEntity } from './aeropuerto.entity';
 import { AeropuertoService } from './aeropuerto.service';
 
 @Module({
+  imports: [TypeOrmModule.forFeature([AeropuertoEntity])],
   providers: [AeropuertoService],
 })
 export class AeropuertoModule {}
