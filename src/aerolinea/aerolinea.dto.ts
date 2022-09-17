@@ -1,4 +1,11 @@
-import { IsNotEmpty, IsString, IsUrl } from 'class-validator';
+import { Type } from 'class-transformer';
+import {
+  IsDateString,
+  IsNotEmpty,
+  IsString,
+  IsUrl,
+  MaxDate,
+} from 'class-validator';
 export class AerolineaDto {
   @IsString()
   @IsNotEmpty()
@@ -8,8 +15,9 @@ export class AerolineaDto {
   @IsNotEmpty()
   readonly descripcion: string;
 
-  @IsString()
   @IsNotEmpty()
+  @Type(() => Date)
+  @MaxDate(new Date())
   readonly fecha_fundacion: string;
 
   @IsUrl()
