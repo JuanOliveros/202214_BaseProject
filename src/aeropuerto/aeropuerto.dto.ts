@@ -1,10 +1,11 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsString, MaxLength } from 'class-validator';
 export class AeropuertoDto {
   @IsString()
   @IsNotEmpty()
   readonly nombre: string;
 
   @IsString()
+  @MaxLength(3)
   @IsNotEmpty()
   readonly codigo: string;
 

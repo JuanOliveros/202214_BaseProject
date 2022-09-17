@@ -50,7 +50,7 @@ describe('AerolineaAeropuertoService', () => {
     aerolinea = await aerolineaRepository.save({
       nombre: faker.company.name(),
       descripcion: faker.lorem.sentence(),
-      fecha_fundacion: faker.date.past(),
+      fecha_fundacion: '09-13-1996',
       pagina_web: faker.internet.domainName(),
       aeropuertos: aeropuertosList,
     });
@@ -71,7 +71,7 @@ describe('AerolineaAeropuertoService', () => {
     const newAerolinea: AerolineaEntity = await aerolineaRepository.save({
       nombre: faker.company.name(),
       descripcion: faker.lorem.sentence(),
-      fecha_fundacion: faker.date.past(),
+      fecha_fundacion: '09-13-1996',
       pagina_web: faker.internet.domainName(),
     });
 
@@ -92,7 +92,7 @@ describe('AerolineaAeropuertoService', () => {
     const newAerolinea: AerolineaEntity = await aerolineaRepository.save({
       nombre: faker.company.name(),
       descripcion: faker.lorem.sentence(),
-      fecha_fundacion: faker.date.past(),
+      fecha_fundacion: '09-13-1996',
       pagina_web: faker.internet.domainName(),
     });
     await expect(() =>
@@ -161,7 +161,7 @@ describe('AerolineaAeropuertoService', () => {
       service.findAirportFromAirline(aerolinea.id, newAeropuerto.id),
     ).rejects.toHaveProperty(
       'message',
-      'El aeropuerto con el id dado no esta asociado con la aerolina dada',
+      'El aeropuerto con el id dado no esta asociado con la aerolinea dada',
     );
   });
 
@@ -272,7 +272,7 @@ describe('AerolineaAeropuertoService', () => {
       service.deleteAirportFromAirline(aerolinea.id, newAeropuerto.id),
     ).rejects.toHaveProperty(
       'message',
-      'El aeropuerto con el id dado no esta asociado con la aerolina dada',
+      'El aeropuerto con el id dado no esta asociado con la aerolinea dada',
     );
   });
 });

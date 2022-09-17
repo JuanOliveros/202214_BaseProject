@@ -94,7 +94,7 @@ export class AerolineaAeropuertoService {
 
     if (!aerolineaAeropuerto)
       throw new BusinessLogicException(
-        'El aeropuerto con el id dado no esta asociado con la aerolina dada',
+        'El aeropuerto con el id dado no esta asociado con la aerolinea dada',
         BusinessError.PRECONDITION_FAILED,
       );
 
@@ -161,7 +161,7 @@ export class AerolineaAeropuertoService {
 
     if (!aerolineaAeropuerto)
       throw new BusinessLogicException(
-        'El aeropuerto con el id dado no esta asociado con la aerolina dada',
+        'El aeropuerto con el id dado no esta asociado con la aerolinea dada',
         BusinessError.PRECONDITION_FAILED,
       );
 

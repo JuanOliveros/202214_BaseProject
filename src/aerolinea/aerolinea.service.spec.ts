@@ -31,7 +31,7 @@ describe('AerolineaService', () => {
       const aerolinea: AerolineaEntity = await repository.save({
         nombre: faker.company.name(),
         descripcion: faker.lorem.sentence(),
-        fecha_fundacion: faker.date.past(),
+        fecha_fundacion: '13-09-2022',
         pagina_web: faker.internet.domainName(),
       });
       aerolineaList.push(aerolinea);
@@ -72,7 +72,7 @@ describe('AerolineaService', () => {
       id: '',
       nombre: faker.company.name(),
       descripcion: faker.lorem.sentence(),
-      fecha_fundacion: faker.date.past(),
+      fecha_fundacion: '13-09-2022',
       pagina_web: faker.internet.domainName(),
       aeropuertos: [],
     };

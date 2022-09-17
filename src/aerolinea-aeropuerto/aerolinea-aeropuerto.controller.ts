@@ -70,7 +70,7 @@ export class AerolineaAeropuertoController {
     @Param('aeropuertoId') aeropuertoId: string,
   ) {
     return await this.aerolineaAeropuertoService.deleteAirportFromAirline(
-      aeropuertoId,
+      aerolineaId,
       aeropuertoId,
     );
   }
