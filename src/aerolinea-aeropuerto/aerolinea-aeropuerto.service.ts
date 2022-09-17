@@ -29,7 +29,7 @@ export class AerolineaAeropuertoService {
       });
     if (!aeropuerto)
       throw new BusinessLogicException(
-        'El aropuerto con id dado no fue encontrado',
+        'El aeropuerto con el id dado no fue encontrado',
         BusinessError.NOT_FOUND,
       );
 
@@ -74,7 +74,7 @@ export class AerolineaAeropuertoService {
       });
     if (!aeropuerto)
       throw new BusinessLogicException(
-        'El aropuerto con id dado no fue encontrado',
+        'El aeropuerto con el id dado no fue encontrado',
         BusinessError.NOT_FOUND,
       );
 
@@ -141,7 +141,7 @@ export class AerolineaAeropuertoService {
       });
     if (!aeropuerto)
       throw new BusinessLogicException(
-        'El aeropuerto con el id dado no fue encontrad',
+        'El aeropuerto con el id dado no fue encontrado',
         BusinessError.NOT_FOUND,
       );
 
